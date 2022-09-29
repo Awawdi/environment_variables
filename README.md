@@ -35,9 +35,10 @@ What if I have two environments, each has its own keys. How can I verify Product
 I can specify more than one .env file, and direct load_dotenv to locate the correct .env file.
 
 For example:
-    *home = Path().absolute()*
-    *dev_path = Path(f'{home}/DEV/.env')*
-    *prod_path = Path(f'{home}/PROD/.env')*
+
+*home = Path().absolute()*
+*dev_path = Path(f'{home}/DEV/.env')*
+*prod_path = Path(f'{home}/PROD/.env')*
 
 when I want to load the Development environment keys, I will use 
 
@@ -45,11 +46,13 @@ when I want to load the Development environment keys, I will use
 *print(os.environ.get("API_KEY"))*
     
 and when I want to load the Production environment keys, I will use 
+
 *load_dotenv(dotenv_path=prod_path)*
 *print(os.environ.get("API_KEY"))*
 
 By default, load_dotenv doesn't override existing environment variables, so either I can use different keys
 For example:
+
 API_KEY_DEV in Development .env file and 
 API_KEY_PROD in Production .env file
 
