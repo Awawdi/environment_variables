@@ -1,4 +1,6 @@
-Environment Variables
+# Environment Variables
+
+### Intro
 
 Environment variables are variables that store data in your program but outside your code.
 For example, key and secret for an API. I want this information to be stored outside my source code, so I can keep sensitive data safe. 
@@ -9,18 +11,22 @@ Cool for now.
 When I create a new environment variable, it only exists for that session. When I close the terminal/program, the environment variable no longer exists.
 How can I make these variables persist?
 
+### Persistence
+
 My preferred way is to use python-dotenv library
-First install the library 
+*   First install the library 
 pip3 install python-dotenv
-then create a .env file in the same directory as the Python file resides. 
-Next, create a variable inside .env file like this:
-Name = value 
-Back into the code, I will import the library 
+*   then create a .env file in the same directory as the Python file resides. 
+*   Next, create a variable inside .env file like this: Name = value 
+
+*   Back into the code, I will import the library 
 from dotenv import load_dotenv
+
 calling load_dotenv function, brings environment variables into os.environ, and now I can access them.
 print(os.environ["API_USER"])
 
-Cool for now.
+### Cool for now
+
 What if I have two environments, each has its own keys. How can I verify Production environment is using Production keys and Development environment is using Development keys?
 I can specify more than one .env file, and direct load_dotenv to locate the correct .env file.
 
