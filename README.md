@@ -19,7 +19,7 @@ My preferred way is to use python-dotenv library
 *pip3 install python-dotenv*
 
 *   then create a .env file in the same directory as the Python file resides. 
-*   Next, create a variable inside .env file like this: Name = value 
+*   Next, create a variable inside .env file like this: Name = "value"
 *   Back into the code, I will import the library 
 
 *from dotenv import load_dotenv*
